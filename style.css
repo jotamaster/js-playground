@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #1a1a1a;
+    background-color: #1e1e1e; /* Fondo oscuro */
 }
 
 .container {
@@ -19,28 +19,26 @@ body {
     height: 80%;
 }
 
+/* Editor y consola divididos a la mitad */
 .editor, .console {
     width: 50%;
     padding: 20px;
 }
 
+/* Estilos del Editor */
 .editor {
-    background-color: #262626;
+    background-color: #1e1e1e; /* Fondo oscuro para el editor */
+    border-right: 2px solid #444;
 }
 
-textarea {
-    width: 100%;
+/* Espacio en la parte superior del editor */
+.editor-container {
     height: 80%;
-    font-family: monospace;
-    font-size: 16px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    resize: none;
-    background: #1a1a1a;
-    color: white;
+    width: 100%;
+    padding-top: 10px; /* Margen superior */
 }
 
+/* Estilos del botón */
 button {
     width: 100%;
     padding: 10px;
@@ -57,15 +55,28 @@ button:hover {
     background-color: #0056b3;
 }
 
+/* Estilos de la consola */
 .console {
-    background-color: #222;
+    background-color: #1e1e1e; /* Mismo color que el editor */
     color: white;
     font-family: monospace;
     font-size: 16px;
     overflow-y: auto;
     height: 100%;
+    border-left: 2px solid #444;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Eliminar el cuadro superior en la consola */
+.console iframe {
+    display: none;
+}
+
+/* Ajuste de estilos para salida */
 pre {
     margin: 0;
+    padding: 10px;
+    white-space: pre-wrap; /* Ajusta el texto */
+    word-wrap: break-word;
 }
